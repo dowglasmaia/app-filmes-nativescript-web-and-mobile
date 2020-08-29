@@ -1,0 +1,15 @@
+<page>
+  <ActionBar flat="true" title=""> </ActionBar>
+
+  <StackLayout>
+    <Image src="~/{{urlImg}}"></Image>
+
+    <Label [text]="title" class="title" textWrap="true"></Label>
+
+    <Label [text]="descripton" class="descripton" textWrap="true"></Label>
+
+    <Button [text]="buttonText" nsRouterLink="#" (tap)="getTest()" ></Button>
+
+
+  </StackLayout>
+</page>

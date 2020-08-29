@@ -1,0 +1,34 @@
+Page {
+  background-color: #252a2e;
+  text-align: center;
+  padding: 20;
+  android-status-bar-background: #252a2e;
+}
+
+ActionBar {
+  background-color: #252a2e;
+  /* flat:true; */
+}
+
+.title{
+  font-size:21;
+  margin-top: 70;
+  color:#aaa;
+  font-weight: bold;
+}
+
+.descripton{
+  font-size:16;
+  margin-top: 25;
+  color:#e7e7e7;
+  font-weight: 400;
+  /*textWrap:"true" */
+}
+
+Button{
+  margin-top: 70;
+  background-color: #ff5576;
+  color: #fff;
+  border-radius: 10;
+  font-weight: 900;
+}
