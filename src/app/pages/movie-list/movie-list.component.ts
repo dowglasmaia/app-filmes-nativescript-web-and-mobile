@@ -20,9 +20,9 @@ export class MovieListComponent implements OnInit {
     {
       id: 2,
       title: "Vingadores",
-      obs: "Etiam auctor dictum mauris, ac euismod libero molestie et. Fusce at tellus vulputate, vulputate elit vel, porta magna. Nunc sit amet consequat diam. Praesent gravida nunc vel tempor malesuada.",
+      obs: "Fusce at tellus vulputate, vulputate elit vel, porta magna. Nunc sit amet consequat diam. Praesent gravida nunc vel tempor malesuada.",
       rating: 5,
-      toWatchNext: true
+      toWatchNext: false
     },
     {
       id: 3,

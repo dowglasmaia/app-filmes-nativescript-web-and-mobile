@@ -1,1 +1,45 @@
-<p>movie-list works!</p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Lista de Filmes</li>
+  </ol>
+</nav>
+
+<div class="rounded shadow-lg p-3">
+
+  <!-- Page Title-->
+  <h1 class="border-title">Gerenciar Filmes</h1>
+  <h4 class="text-muted border-title">Cadastre, edite ou remova filmes da sua lista</h4>
+
+  <!-- Movie List-->
+  <div class="row">
+    <div *ngFor="let movie of movies" class="col-md-6 mt-3">
+      <div class="card movie-container">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{movie.title}}
+
+            <span *ngIf="movie.toWatchNext" title="Quero assistir" class="float-right">🍿</span>
+          </h5>
+
+          <div class="card-text">
+            {{movie.obs}}
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="row">
+            <div class="col  d-flex justify-content-start">
+              <a class="btn btn-sm btn-dark mr-2" routerLink="#">Editar</a>
+              <button class="btn btn-sm btn-danger"> Excluir</button>
+
+            </div>
+            <div class="col d-flex justify-content-end">
+              <h5>{{movie.rating}}⭐</h5>
+            </div>
+          </div>          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
