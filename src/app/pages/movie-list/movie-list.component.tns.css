@@ -1,4 +1,109 @@
-/*Button {
+ActionBar {
   background-color: var(--my-dark-color-one);
+  padding: 0 0 12 0;
+  flat: "true";
+}
 
-}*/
+ActionBar .show-drawer-btn {
+  horizontal-alignment: left;
+  android-elevatoin: 0;
+  font-size: 25;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10;
+  padding: 0;
+  background-color: transparent;
+  color: var(--my-dark-color-five);
+}
+
+ActionBar .page-title {
+  /* border-width: 2;
+  border-color: yellow;*/
+  color: var(--light-color-one);
+  font-size: 25;
+  font-weight: bold;
+  padding: 0;
+  margin-top: -30;
+  text-align: center;
+
+
+}
+
+ActionBar .page-subtitle {
+  color: var(--light-color-five);
+  font-size: 14;
+  font-weight: 700;
+  padding: 0;
+  margin-top: 5;
+  text-align: center;
+  color: #fff;
+}
+
+/* -------------------------------- */
+ListView {
+  background-color: transparent;
+  separator-color: transparent;
+  height: 100%;
+}
+
+ListView .movie-container {
+  background-color: var(--light-color-two);
+  border-radius: 25;
+  border-width: 8 12;
+  border-color: var(--light-color-three);
+  padding: 5 10;
+  height: 110;
+}
+
+.movie-container .movie-rating {
+  font-size: 14;
+  font-weight: bold;
+  background-color: var(--light-color-four);
+  width: 50;
+  height: 50;
+  padding-top: 15;
+  padding-bottom: 15;
+  border-radius: 40;
+  text-align: center;
+  color: var(--my-dark-color-two);
+  margin-right: 15;
+}
+
+.movie-container .movie-title {
+  font-weight: bold;
+  color: var(--light-color-one);
+  margin-top: 8;
+  font-size: 17;
+}
+
+.movie-container .movie-obs {
+  color: var(--my-dark-color-four);
+  margin-top: 8;
+  font-size: 12;
+}
+
+.movie-container .movie-actions {
+  padding: 0;
+  width: 35;
+}
+
+.movie-actions .delete-movie-btn {
+  text-align: center;
+  margin: 5 0 0 0;
+  padding: 0;
+  font-size: 12;
+  color: #000;
+}
+
+.movie-actions .watch-next-flag {
+  text-align: center;
+  margin: 30 0 0 0;
+  padding: 0;
+  font-size: 20;
+  color: #000;
+  opacity: 0.2; /*20%*/
+}
+
+.movie-actions .watch-next-flag.marked {
+  opacity: 1; /*100%*/
+}

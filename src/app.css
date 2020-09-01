@@ -2,3 +2,8 @@
 /* @import '~@nativescript/theme/css/blue.css'; */
 
 @import "common-styles.css";
+
+Page{
+  background-color: var(--light-color-three);
+  android-status-bar-background: var(--my-dark-color-one);
+}
