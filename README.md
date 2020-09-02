@@ -15,3 +15,6 @@ https://docs.nativescript.org/angular/start/cli-basics
 https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties
 
 https://docs.nativescript.org/ui/styling#pseudo-selector
+
+**Back-End em Memoria**
+https://www.npmjs.com/package/angular-in-memory-web-api
