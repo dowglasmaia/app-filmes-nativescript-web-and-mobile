@@ -15,4 +15,8 @@ export class MovieListComponent implements OnInit {
     console.log(this.movies)
   }
 
+  test(){
+    alert(`Teste BTN - Label`)
+  }
+
 }
