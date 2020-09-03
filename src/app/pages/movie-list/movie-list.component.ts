@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '@src/app/shared/movie.model';
+import { MovieService } from '@src/app/shared/movie.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -7,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
-  movies = [ ];
+  movies: Movie[] = [];
 
   ngOnInit() {
-    console.log(this.movies)
+    this.getMovies();
   }
 
-  test(){
+  public getMovies() {
+    this.movieService.getAll().subscribe(result => {
+      this.movies = result
+    })
+  }
+
+  test() {
     alert(`Teste BTN - Label`)
   }
 
