@@ -13,14 +13,29 @@ export class MovieListComponent implements OnInit {
 
   movies: Movie[] = [];
 
+  newMovieTitle: string = '';
+
   ngOnInit() {
-    this.getMovies();
+    this.loadMovies();
   }
 
-  public getMovies() {
+  public loadMovies() {
     this.movieService.getAll().subscribe(result => {
       this.movies = result
     })
+  }
+
+  createMovie() {
+    if (!this.newMovieTitle) { return; }
+
+    const movie = Movie.fromJson({ title: this.newMovieTitle });
+
+    this.movieService.create(movie).subscribe(
+      movie => {
+        this.movies.unshift(movie);
+        this.newMovieTitle ='';
+      }
+    )
   }
 
   test() {

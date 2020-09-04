@@ -5,3 +5,11 @@
 .movie-container .card-title {
   color:var(--light-color-one)
 }
+
+.new-movie-container{
+  background-color: var(--light-color-four);
+  border-color: var(--light-color-four);
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+}
