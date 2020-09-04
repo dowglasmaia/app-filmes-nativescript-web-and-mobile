@@ -12,10 +12,10 @@ ActionBar .show-drawer-btn {
   text-align: left;
   margin-top: 10;
   padding: 0;
-  background-color: transparent;  
+  background-color: transparent;
   color: var(--my-dark-color-five);
-  
- 
+
+
 }
 
 
@@ -42,7 +42,36 @@ ActionBar .page-subtitle {
   color: #fff;
 }
 
-/* -------------------------------- */
+
+/* -------------CARD NEW MOVIE------------------- */
+.new-movie-container {
+  height: 40;
+  margin: 20 20 10 20;
+}
+
+.new-movie-container TextField {
+  border-bottom-color: var(--my-dark-color-six);
+  border-bottom-width: 1;
+  color: var(--my-dark-color-four);
+  padding: 5;
+  font-size: 16;
+  font-weight: bold;
+  placeholder-color: var(--my-dark-color-six);
+  margin-right: 10;
+}
+
+.new-movie-container Button {
+  width: 35;
+  height: 35;
+  color: #eee;
+  font-size: 23;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 20;
+  background-color: var(--my-dark-color-four);
+}
+
+/* --------------LISTA DE FILMES------------------ */
 ListView {
   background-color: transparent;
   separator-color: transparent;
@@ -104,9 +133,11 @@ ListView .movie-container {
   padding: 0;
   font-size: 20;
   color: #000;
-  opacity: 0.2; /*20%*/
+  opacity: 0.2;
+  /*20%*/
 }
 
 .movie-actions .watch-next-flag.marked {
-  opacity: 1; /*100%*/
+  opacity: 1;
+  /*100%*/
 }

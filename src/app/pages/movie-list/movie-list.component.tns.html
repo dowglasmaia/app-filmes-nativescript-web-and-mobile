@@ -14,21 +14,28 @@
   </ActionBar>
 
   <StackLayout>
+    <!-- new Movie container-->
+    <GridLayout class="new-movie-container" rows="" columns="*, auto">
+      <TextField col="0" hint="Título do filme" text="" [(ngModel)]="newMovieTitle"></TextField>
+      <Button col="1" text="+" (tap)="createMovie()"></Button>            
+    </GridLayout>
+
+    <!-- Lista de Filmes -->
     <ListView [items]="movies" class="list-group">
 
       <!-- Linha de cada Objeto -->
       <ng-template let-movie="item">
         <GridLayout class="movie-container" columns="auto, * , auto">
           <Label text="{{movie.rating}}⭐" textWrap="true" col="0" class="movie-rating"></Label>
-          
+
           <StackLayout col="1">
-            <Label text="{{movie.title}}" textWrap="true"  class="movie-title"></Label>
-            <Label text="{{movie.obs}}" textWrap="true"  class="movie-obs"></Label>
+            <Label text="{{movie.title}}" textWrap="true" class="movie-title"></Label>
+            <Label text="{{movie.obs}}" textWrap="true" class="movie-obs"></Label>
           </StackLayout>
-        
+
           <StackLayout col="2" class="movie-actions">
-              <Label class="delete-movie-btn" text="❌" ></Label>
-              <Label class="watch-next-flag " [class.marked]="movie.toWatchNext" text="🍿" ></Label>              
+            <Label class="delete-movie-btn" text="❌"></Label>
+            <Label class="watch-next-flag " [class.marked]="movie.toWatchNext" text="🍿"></Label>
           </StackLayout>
 
         </GridLayout>
