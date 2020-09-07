@@ -33,9 +33,20 @@ export class MovieListComponent implements OnInit {
     this.movieService.create(movie).subscribe(
       movie => {
         this.movies.unshift(movie);
-        this.newMovieTitle ='';
+        this.newMovieTitle = '';
       }
     )
+  }
+
+  deleteMovie(movie: Movie) {
+    const message = `Deseja realmente excluir o filme ${movie.title}`;
+    const mustDelete = confirm(message);
+
+    if(mustDelete){
+      this.movieService.delete(movie).subscribe(
+        () => this.movies = this.movies.filter(obj => obj != movie) // retorna uma lista sem o obj deletado.
+      )
+    }
   }
 
   test() {
