@@ -18,6 +18,8 @@ export class MovieListComponent implements OnInit {
 
   newMovieTitle: string = '';
 
+  ts: MovieListHelper;
+
   ngOnInit() {
     this.loadMovies();
   }
@@ -55,5 +57,7 @@ export class MovieListComponent implements OnInit {
   test() {
     alert(`Teste BTN - Label`)
   }
+
+ 
 
 }
