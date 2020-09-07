@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+//import { MovieListHelper } from '@src/app/pages/movie-list/movie-list.helper.tns'; 
+import { MovieListHelper } from '@src/app/pages/movie-list/movie-list.helper'; // remover o .tns ou .ts do inport
 import { Movie } from '@src/app/shared/movie.model';
 import { MovieService } from '@src/app/shared/movie.service';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -31,16 +34,16 @@ export class MovieListComponent implements OnInit {
     const movie = Movie.fromJson({ title: this.newMovieTitle });
 
     this.movieService.create(movie).subscribe(
-      movie => {
-        this.movies.unshift(movie);
+      result => {
+        this.movies.unshift(result);
         this.newMovieTitle = '';
       }
     )
   }
 
-  deleteMovie(movie: Movie) {
+  async deleteMovie(movie: Movie) {
     const message = `Deseja realmente excluir o filme ${movie.title}`;
-    const mustDelete = confirm(message);
+    const mustDelete = await MovieListHelper.showDeleteMovieConfirmation(message);
 
     if(mustDelete){
       this.movieService.delete(movie).subscribe(

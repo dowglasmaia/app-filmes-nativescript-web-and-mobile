@@ -11,6 +11,10 @@ https://docs.nativescript.org/angular/ui/overview
 
 https://docs.nativescript.org/angular/start/cli-basics
 
+https://docs.nativescript.org/angular/code-sharing/code-splitting
+
+https://docs.nativescript.org/angular/ui/dialogs
+
 **Utilizando variáveis CSS:**
 https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties
 
